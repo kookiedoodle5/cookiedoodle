@@ -25,49 +25,17 @@
 </nav>
 
 <div class="row">
-  <div class="col-3">
+  <div class="col-3" *ngFor="let drawing of imagesInfo">
     <div class="card">
       <header>
-        <h4>My first doodle</h4>
+        <h4>{{drawing.title}}</h4>
       </header>
-      <img src="../assets/images/01.jpg" alt="" />
+      <img [src]="'../assets/images/' + drawing.fileName" alt="" />
       <footer class="is-right">
         <p>
-          This is my first doodle. Here is something interesting about this.
-          Nothing. Haha
+          {{drawing.description}}
         </p>
       </footer>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <header>
-        <h4>Another doodle</h4>
-      </header>
-      <img src="../assets/images/02.jpg" alt="" />
-      <footer class="is-right">
-        <p>Here is another doodle I stole from the internet</p>
-      </footer>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <header>
-        <h4>Doodle number tree</h4>
-      </header>
-      <img src="../assets/images/03.jpg" alt="" />
-      <footer class="is-right">
-        <p>This is the third doodle...</p>
-      </footer>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="card">
-      <header>
-        <h4>Go forth and doodle</h4>
-      </header>
-      <img src="../assets/images/04.jpg" alt="" />
-      <footer class="is-right">Yup, you guessed it.</footer>
     </div>
   </div>
 </div>
